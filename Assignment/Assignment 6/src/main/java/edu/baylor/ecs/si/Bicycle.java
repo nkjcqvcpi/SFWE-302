@@ -1,0 +1,46 @@
+package edu.baylor.ecs.si;
+
+public class Bicycle {
+    public int cadence;
+    public int gear;
+    public int speed;
+    public Color color;
+
+    public Bicycle(int startCadence, int startSpeed, int startGear, Color color) {
+        gear = startGear;
+        cadence = startCadence;
+        speed = startSpeed;
+        this.color = color;
+    }
+
+    public void setCadence(int newValue) {
+        cadence = newValue;
+    }
+
+    public void setGear(int newValue) {
+        gear = newValue;
+    }
+
+    public void applyBrake(int decrement) {
+        speed -= decrement;
+    }
+
+    public void speedUp(int increment) {
+        speed += increment;
+    }
+
+    public void printDescription(){
+        System.out.println("\nBike is " + "in gear " + this.gear
+                + " with a cadence of " + this.cadence +
+                " and travelling at a speed of " + this.speed +
+                ", the color is " + this.color + ". ");
+    }
+
+    public void visit(BasicService service) {
+        service.accept(this);
+    }
+
+    public void visit(BicycleVisitor servis) {
+        servis.accept(this);
+    }
+}
