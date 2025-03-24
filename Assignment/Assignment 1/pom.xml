@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>li.haotang</groupId>
+    <groupId>sfwe302.assignment1</groupId>
     <artifactId>assignment-1</artifactId>
     <version>1.0-SNAPSHOT</version>
 
